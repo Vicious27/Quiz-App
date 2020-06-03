@@ -1,0 +1,393 @@
+
+
+/* ==================================================== */
+/* GENERAL STYLES */
+/* ==================================================== */
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7vh;
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #232323;
+  color: white;
+}
+
+
+
+/* ==================================================== */
+/* TYPOGRAPHY STYLES */
+/* ==================================================== */
+
+h1 {
+  line-height: 1;
+  margin: 0;
+}
+
+h2 {
+  margin: 0 0 .7em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: #38B402;
+}
+
+#rg {
+  color: aqua;
+}
+
+#mk {
+  color: gold;
+}
+
+
+
+/* ==================================================== */
+/* HEADER STYLES */
+/* ==================================================== */
+
+header {
+  display:flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+header span {
+  display: block;
+}
+
+#info {
+  text-align: right;
+  position: fixed;
+  top: 4rem;
+  right: 2rem;
+  font-size: 1.2rem;
+  padding: inherit;
+}
+
+#info span {
+  font-weight: bold;
+}
+
+
+
+/* ==================================================== */
+/* MAIN & SECTION STYLES */
+/* ==================================================== */
+
+main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  transition: all .2s ease;
+}
+
+main, .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+.container{
+  height: 100%;
+}
+
+#middle, #bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#middle {
+  flex: 1;
+}
+
+#bottom {
+  background: #171717;
+  text-align: center;
+  z-index: 1;
+}
+
+#bottom p {
+  opacity: 0.75;
+}
+
+.credits {
+  padding: 2em 4em 4em;
+}
+
+
+
+/* ==================================================== */
+/* FEEDBACK STYLES */
+/* ==================================================== */
+
+#feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.329);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  text-align: center;
+}
+
+#feedback article {
+  background: white;
+  color: black;
+  width: 80%;
+  max-width: 600px;
+  padding: 2em;
+}
+
+#feedback h2 {
+  font-size: 2em;
+  color: #342525;
+}
+
+#feedback p {
+  line-height: 1.3;
+  font-size: 1.2em;
+  margin-bottom: .8em;
+}
+
+#feedback span {
+  font-weight: bold;
+}
+
+#feedback span.wrong {
+  color: red;
+}
+
+#feedback span.right {
+  color: #38B402; 
+}
+
+
+
+/* ==================================================== */
+/* RESULT STYLES */
+/* ==================================================== */
+
+#result {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#result p{
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 2em;
+}
+
+
+
+/* ==================================================== */
+/* BUTTON STYLES */
+/* ==================================================== */
+
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: background .1s ease;
+}
+
+.btn-default {
+  font-size: 1.5rem;
+  padding: 1em 3em;
+  border-radius: .5em;
+  border-bottom: .3em solid rgb(196, 181, 181);
+  background: white;
+}
+
+.btn-default:hover {
+  transform: translateY(.1em);
+  border-bottom-width: .2em;
+}
+
+.btn-default:active {
+  transform: translateY(.2em);
+  border-bottom-width: 0;
+}
+
+.btn-alt {
+  display: block;
+  position: relative;
+  width: calc(100% + 4em);
+  font-size: inherit;
+  padding: 1.5em 0;
+  margin: 2em -2em -2em;
+  background: #232323;
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn-alt:hover {
+  background: black;
+}
+
+.btn-small {
+  font-size: .8em;
+}
+
+
+
+/* ==================================================== */
+/* CARD STYLES */
+/* ==================================================== */
+
+.card {      
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 17em;
+  width: 12em;
+  background: white;
+  color: black;
+  padding: 1.2em;
+  border-radius: .5em;
+  box-shadow: -1em 1em 0 0 rgba(0, 0, 0, .5);
+  line-height: 1.3;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.card span {
+  width: 100%;
+  white-space: normal;
+}
+
+.card input[type=radio] {
+  outline: none;
+}
+
+.card input[type=submit]{
+  font-size: .7em;
+  font-weight: bold;
+  background: #DDDDDD;
+  color: #232323;
+  padding: 1.2rem 1rem;
+  margin: -1.2rem -1.2rem;
+  width: calc(100% + 2.4rem);
+  display: none;
+}
+
+.card input[type=submit]:hover{
+  background: #BBBBBB;
+}
+
+.card-question{
+  background: black;
+  color: white;
+}
+
+.cards .card {
+  text-align: left;
+  margin-right: 2em;
+  flex-direction: column-reverse;
+}
+
+.cards .card:last-of-type {
+  margin-right: 0;
+}
+
+.cards {
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  font-size: .8rem;
+  padding: 3em 4em;
+}
+
+.cards:hover .card,
+.cards:focus-within .card {
+  opacity: .5;
+}
+
+.card:hover,
+.card:focus-within {
+  opacity: 1 !important;
+}
+
+.cards.answered .card:not(.card-correct) {
+  opacity: .5 !important;
+  box-shadow: -1em 1em 0 0 red;
+}
+
+.cards.answered .card-correct {
+  opacity: 1 !important;
+  box-shadow: -1em 1em 0 0 #38B402;
+}
+
+
+
+/* ==================================================== */
+/* CARD SPECIFIC/OVERRIDE STYLES */
+/* ==================================================== */
+
+#question {
+  pointer-events: none;
+  transform: rotate(-8deg) translateX(1em);
+}
+
+#answer {
+  cursor: default;
+  transform: rotate(6deg) translate(-1em, 2em);
+}
+
+
+
+/* ==================================================== */
+/* RESPONSIVE STYLES + FIXES */
+/* ==================================================== */
+
+@media screen and (max-width: 900px){
+  .cards {
+    font-size: .75rem;
+  }
+}
+
+@media screen and (min-width: 500px){
+  #result p {
+    max-width: 100%;
+  }
+
+  .card input[type=submit]{
+    display: block;
+  }
+}

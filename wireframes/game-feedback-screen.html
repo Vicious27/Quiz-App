@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz Against Humanity</title>
+  <meta name="description" content="A trivia game for weird people.">
+  <meta name="theme-color" content="#232323">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+  <link href="../app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <section id="title">
+      <h1><span>Quiz</span> <span>Against</span> <span>Humanity.</span></h1>
+      <p><span>A trivia game</span> <span>for weird people.</span></p>
+    </section>
+  </header>
+
+  <main>
+    <section id="info">
+      <p>Score: <span>0</span></p>
+      <p>Question: <span>1/10</span></p>
+    </section>
+
+    <section id="feedback">
+      <article>
+        <h2>Whoops!</h2>
+        <p>
+          '<span class="wrong">Honey</span>' wasn't the right answer.<br>
+          If you were smarter, you would have picked '<span class="right">Insect poop</span>'.
+        </p>
+        <p>Oh, well.</p>
+        Find out more <a href="#">here</a>.
+        <a id="nextButton" href="#" class="btn btn-alt">Next Question</a>
+      </article>
+    </section>
+
+    <form class="container">
+      <section id="middle">
+        <article>
+          <p id="question" class="card card-question">
+            <span>Your question goes here.</span>
+          </p>
+          <p id="answer" class="card">
+            <span>Your answer goes here.</span>
+            <input class="btn btn-alt" type="submit" value="Click here to submit" />
+          </p>
+        </article>
+      </section>
+      <section id="bottom">
+        <div class="cards">
+          <label for="answer1" class="card card-correct">
+            <input type="radio" checked name="answer" value="This is the correct answer" id="answer1">
+            <span>This is the correct answer</span>
+          </label>
+          <label for="answer2" class="card">
+            <input type="radio" name="answer" value="Something else to distract you" id="answer2">
+            <span>Something else to distract you</span>
+          </label>
+          <label for="answer3" class="card">
+            <input type="radio" name="answer" value="Some random fact that's close to the truth" id="answer3">
+            <span>Some random fact that's close to the truth</span>
+          </label>
+          <label for="answer4" class="card">
+            <input type="radio" name="answer" value="You should get the point by now" id="answer4">
+            <span>You should get the point by now</span>
+          </label>
+        </div>
+      </section>
+    </form>
+  </main>
+
+</body>
+
+</html>
